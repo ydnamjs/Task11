@@ -22,7 +22,8 @@ const QUIZZES = sample.map(
 describe("Quizzer Tests", () => {
     render(<Quizzer />);
     
-    /*beforeEach(() => {
+    /*
+    beforeEach(() => {
         render(<Quizzer />);
     });
     */
@@ -193,6 +194,9 @@ describe("Quizzer Tests", () => {
     });
 
     test("Users can delete an existing quiz question", () => {
+
+        //todo
+
     });
 
     test("Users can add a new quiz question", () => {
@@ -222,6 +226,9 @@ describe("Quizzer Tests", () => {
     });
 
     test("Users can edit the questions and fields of a quiz", () => {
+
+        //todo
+
     });
 
     test("Users can reorder quiz questions", () => {
