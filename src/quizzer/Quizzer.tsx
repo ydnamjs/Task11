@@ -32,7 +32,7 @@ export function Quizzer (): JSX.Element {
 
     function addQuiz(title: string, body: string) {
         
-        setQuizzes([...quizzes, {id: 1, title: title, body: body, published: false, questionList: []}]);
+        setQuizzes([...quizzes, {id: quizzes.length + 1, title: title, body: body, published: false, questionList: []}]);
     }
 
     function deleteQuiz(qId: number) {
@@ -88,19 +88,19 @@ export function Quizzer (): JSX.Element {
                         Users can clear out their existing answers for a quiz
                         (TESTED)
                     </li>
-                    <li>Users can publish or unpublish a question (TESTED)</li>
+                    <li>Users can publish or unpublish a question (NOT TESTED)</li>
                     <li>
                         Users can filter the questions in a list so that only
-                        published questions are shown (TESTED)
+                        published questions are shown (NOT TESTED)
                     </li>
                     <li>
                         Users can edit the questions and fields of a quiz
-                        (TESTED)
+                        (NOT TESTED)
                     </li>
-                    <li>Users can add a new quiz question (TESTED)</li>
-                    <li>Users can delete an existing quiz question (TESTED)</li>
-                    <li>Users can reorder quiz questions (TESTED)</li>
-                    <li>Users can add a new quiz (TESTED)</li>
+                    <li>Users can add a new quiz question (NOT TESTED)</li>
+                    <li>Users can delete an existing quiz question (NOT TESTED)</li>
+                    <li>Users can reorder quiz questions (NOT TESTED)</li>
+                    <li>Users can add a new quiz (NOT TESTED)</li>
                     <li>Users can delete an existing quiz (TESTED)</li>
                 </ul>
             </div>
