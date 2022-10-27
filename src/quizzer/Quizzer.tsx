@@ -20,7 +20,7 @@ const QUIZZES = sample.map(
     })
 );
 
-export const Quizzer = () => {
+export function Quizzer (): JSX.Element {
     const [quizzes, setQuizzes] = useState<Quiz[]>(QUIZZES);
     const [showAddModal, setShowAddModal] = useState(false);
 
@@ -31,7 +31,8 @@ export const Quizzer = () => {
     }
 
     function addQuiz(title: string, body: string) {
-        setQuizzes([...quizzes, newQuiz]);
+        
+        setQuizzes([...quizzes, {id: 1, title: title, body: body, published: false, questionList: []}]);
     }
 
     function deleteQuiz(qId: number) {
