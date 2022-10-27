@@ -98,7 +98,7 @@ export function Quizzer (): JSX.Element {
                         (NOT TESTED)
                     </li>
                     <li>Users can add a new quiz question (NOT TESTED)</li>
-                    <li>Users can delete an existing quiz question (NOT TESTED)</li>
+                    <li>Users can delete an existing quiz question (ESTED)</li>
                     <li>Users can reorder quiz questions (NOT TESTED)</li>
                     <li>Users can add a new quiz (NOT TESTED)</li>
                     <li>Users can delete an existing quiz (TESTED)</li>
