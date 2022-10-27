@@ -54,6 +54,7 @@ export function QuizList ({
                         ></QuizView>
                     );
                 }
+                return null;
             })}
         </div>
     );
