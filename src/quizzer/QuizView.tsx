@@ -5,12 +5,17 @@ import { QuizEdit } from "./QuizEdit";
 
 import "./QuizView.css";
 
-export const QuizView = ({
+export function QuizView ({
     quiz,
     editQuiz,
     deleteQuiz,
     resetView
-}: {}) => {
+}: {
+    quiz: Quiz,
+    editQuiz: (id: number)=>void,
+    deleteQuiz: (id: number)=>void,
+    resetView: ()=>void
+}): JSX.Element {
     const [edit, setEdit] = useState(false);
 
     const switchEdit = () => {
@@ -21,21 +26,21 @@ export const QuizView = ({
         <div className="quiz_card">
             {edit && (
                 <QuizEdit
-                    quiz={quiz
-                    editQuiz={editQuiz
-                    deleteQuiz={deleteQuiz
-                    switchEdit={switchEdit
-                    resetView={resetView
+                    quiz={quiz}
+                    editQuiz={editQuiz}
+                    deleteQuiz={deleteQuiz}
+                    switchEdit={switchEdit}
+                    resetView={resetView}
                 ></QuizEdit>
-            )
+            )}
             {!edit && (
                 <QuizExpanded
-                    quiz={quiz
-                    editQuiz={editQuiz
-                    resetView={resetView
-                    switchEdit={switchEdit
+                    quiz={quiz}
+                    editQuiz={editQuiz}
+                    resetView={resetView}
+                    switchEdit={switchEdit}
                 ></QuizExpanded>
-            )
+            )}
         </div>
     );
-;
+};
