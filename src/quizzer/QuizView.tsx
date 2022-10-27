@@ -12,7 +12,7 @@ export function QuizView ({
     resetView
 }: {
     quiz: Quiz,
-    editQuiz: (id: number)=>void,
+    editQuiz: (id: number, quiz: Quiz)=> void,
     deleteQuiz: (id: number)=>void,
     resetView: ()=>void
 }): JSX.Element {

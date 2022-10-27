@@ -5,12 +5,17 @@ import { QuizCard } from "./QuizCard";
 import "./QuizList.css";
 import { QuizView } from "./QuizView";
 
-export const QuizList = ({
+export function QuizList ({
     quizzes,
     editQuiz,
     deleteQuiz,
     showModal
-}: {}) => {
+}: {
+    quizzes: Quiz[],
+    editQuiz: (id: number, quiz: Quiz)=> void,
+    deleteQuiz: (id: number) => void,
+    showModal: () => void,
+}): JSX.Element {
     const [displayId, setDisplayId] = useState<null | number>(null);
 
     const handleQuizView = (id: number) => {
