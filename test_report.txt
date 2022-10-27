@@ -1,0 +1,299 @@
+
+> tasks@0.1.0 test
+> react-scripts test
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+FAIL src/quizzer/Quizzer.test.tsx
+  ● Quizzer Tests › Users can see a list of quizzes, including the quizzes title, description, and how many questions it has
+
+    TestingLibraryElementError: Unable to find an element with the text: Blank_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body[39m
+      [33mclass[39m=[32m""[39m
+      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
+    [36m/>[39m
+
+      41 |     test("Users can see a list of quizzes, including the quizzes title, description, and how many questions it has", () => {
+      42 |         for (let i = 0; i < QUIZZES.length; i++) {
+    > 43 |             expect(screen.getByText(QUIZZES[i].title)).toBeInTheDocument();
+         |                           ^
+      44 |             expect(
+      45 |                 screen.getByText(
+      46 |                     QUIZZES[i].questionList.length + " question",
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:43:27)
+
+  ● Quizzer Tests › Users can select a specific quiz to see the questions, including the questions name, body, and points
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body[39m
+      [33mclass[39m=[32m""[39m
+      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
+    [36m/>[39m
+
+      55 |
+      56 |     test("Users can select a specific quiz to see the questions, including the questions name, body, and points", () => {
+    > 57 |         const text = screen.getByText("Simple_Questions");
+         |                             ^
+      58 |         text.click();
+      59 |         expect(screen.getByText("Exit")).toBeInTheDocument();
+      60 |         expect(
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:57:29)
+
+  ● Quizzer Tests › Users can enter or choose an answer for a quiz question, and be told if they are correct
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body[39m
+      [33mclass[39m=[32m""[39m
+      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
+    [36m/>[39m
+
+       98 |
+       99 |     test("Users can enter or choose an answer for a quiz question, and be told if they are correct", () => {
+    > 100 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      101 |         text.click();
+      102 |         expect(screen.getByText("Exit")).toBeInTheDocument();
+      103 |         expect(
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:100:29)
+
+  ● Quizzer Tests › Users can see how many total points they have earned
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body[39m
+      [33mclass[39m=[32m""[39m
+      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
+    [36m/>[39m
+
+      113 |
+      114 |     test("Users can see how many total points they have earned", () => {
+    > 115 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      116 |         text.click();
+      117 |         expect(screen.getByText(/\d\/\d/)).toBeInTheDocument();
+      118 |     });
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:115:29)
+
+  ● Quizzer Tests › Users can clear out their existing answers for a quiz
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body[39m
+      [33mclass[39m=[32m""[39m
+      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
+    [36m/>[39m
+
+      119 |
+      120 |     test("Users can clear out their existing answers for a quiz", () => {
+    > 121 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      122 |         text.click();
+      123 |         expect(screen.getByText("Exit")).toBeInTheDocument();
+      124 |         expect(
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:121:29)
+
+  ● Quizzer Tests › Users can publish or unpublish a question
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body[39m
+      [33mclass[39m=[32m""[39m
+      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
+    [36m/>[39m
+
+      141 |
+      142 |     test("Users can publish or unpublish a question", () => {
+    > 143 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      144 |         text.click();
+      145 |         const editButton = screen.getByText("Edit");
+      146 |         editButton.click();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:143:29)
+
+  ● Quizzer Tests › Users can filter the questions in a list so that only published questions are shown
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body[39m
+      [33mclass[39m=[32m""[39m
+      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
+    [36m/>[39m
+
+      163 |
+      164 |     test("Users can filter the questions in a list so that only published questions are shown", () => {
+    > 165 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      166 |         text.click();
+      167 |         const editButton = screen.getByText("Edit");
+      168 |         editButton.click();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:165:29)
+
+  ● Quizzer Tests › Users can delete an existing quiz
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body[39m
+      [33mclass[39m=[32m""[39m
+      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
+    [36m/>[39m
+
+      183 |
+      184 |     test("Users can delete an existing quiz", () => {
+    > 185 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      186 |         text.click();
+      187 |         const editButton = screen.getByText("Edit");
+      188 |         editButton.click();
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:185:29)
+
+  ● Quizzer Tests › Users can add a new quiz question
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body[39m
+      [33mclass[39m=[32m""[39m
+      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
+    [36m/>[39m
+
+      201 |
+      202 |     test("Users can add a new quiz question", () => {
+    > 203 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      204 |         text.click();
+      205 |
+      206 |         expect(
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:203:29)
+
+  ● Quizzer Tests › Users can reorder quiz questions
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body[39m
+      [33mclass[39m=[32m""[39m
+      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
+    [36m/>[39m
+
+      233 |
+      234 |     test("Users can reorder quiz questions", () => {
+    > 235 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      236 |         text.click();
+      237 |
+      238 |         const intialOrder = screen.getAllByTestId("question_body");
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:235:29)
+
+  ● Quizzer Tests › Quiz questions can be of AT LEAST two types: a short answer question or multiple choice question
+
+    TestingLibraryElementError: Unable to find an element with the text: Simple_Questions. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, <script />, <style />
+    [36m<body[39m
+      [33mclass[39m=[32m""[39m
+      [33mstyle[39m=[32m"padding-right: 1024px;"[39m
+    [36m/>[39m
+
+      257 |
+      258 |     test("Quiz questions can be of AT LEAST two types: a short answer question or multiple choice question", () => {
+    > 259 |         const text = screen.getByText("Simple_Questions");
+          |                             ^
+      260 |         text.click();
+      261 |
+      262 |         const editButton = screen.getByText("Edit");
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
+      at Object.<anonymous> (src/quizzer/Quizzer.test.tsx:259:29)
+
+PASS src/App.test.tsx
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   22.46 |    15.51 |   19.17 |   21.96 |                   
+ src               |   66.66 |       50 |      50 |   66.66 |                   
+  App.tsx          |   66.66 |       50 |      50 |   66.66 | 17                
+ src/interfaces    |       0 |        0 |       0 |       0 |                   
+  question.ts      |       0 |        0 |       0 |       0 |                   
+  quiz.ts          |       0 |        0 |       0 |       0 |                   
+ src/quizzer       |   21.48 |    12.96 |    18.3 |   20.93 |                   
+  AddQuizModal.tsx |   61.53 |      100 |      40 |   61.53 | 36-55             
+  QuestionEdit.tsx |       0 |        0 |       0 |       0 | 22-251            
+  QuizCard.tsx     |      75 |       80 |   66.66 |      75 | 25                
+  QuizEdit.tsx     |       0 |        0 |       0 |       0 | 22-163            
+  QuizExpanded.tsx |       0 |        0 |       0 |       0 | 20-96             
+  QuizList.tsx     |      70 |       75 |      60 |      70 | 22,26,47          
+  QuizQuestion.tsx |       0 |        0 |       0 |       0 | 23-62             
+  QuizView.tsx     |       0 |        0 |       0 |       0 | 19-25             
+  Quizzer.tsx      |   73.33 |        0 |      60 |      75 | 28-29,39          
+-------------------|---------|----------|---------|---------|-------------------
+
+Test Suites: 1 failed, 1 passed, 2 total
+Tests:       11 failed, 4 passed, 15 total
+Snapshots:   0 total
+Time:        3.169 s
+Ran all test suites.
