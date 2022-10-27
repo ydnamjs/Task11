@@ -4,10 +4,13 @@ import { Quiz } from "../interfaces/quiz";
 import "./QuizCard.css";
 import { Question } from "../interfaces/question";
 
-export const QuizCard = ({
+export function QuizCard({
     quiz,
     handleClick
-}: {) => {
+}: {
+    quiz: Quiz,
+    handleClick: (id: number)=>void
+}): JSX.Element {
     const filteredQuestions = quiz.questionList.filter(
         (q: Question): boolean =>
             (quiz.published && q.published) || !quiz.published
