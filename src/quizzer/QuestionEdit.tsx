@@ -37,12 +37,22 @@ export function QuestionEdit ({
 
     const handleSwitch = () => {
         b(0);
-        editQuestion(question.id, {
-            ...question,
-            type: "multiple_choice_question",
-            expected: "Example Answer",
-            options: Array(3).fill("Example Answer")
-        });
+        if(question.type === "short_answer_question"){
+            editQuestion(question.id, {
+                ...question,
+                type: "multiple_choice_question",
+                expected: "Example Answer",
+                options: Array(3).fill("Example Answer")
+            });
+        }
+        else {
+            editQuestion(question.id, {
+                ...question,
+                type: "short_answer_question",
+                expected: "Example Answer",
+                options: []
+            });
+        }
     };
 
     const handlePoints = (e: React.ChangeEvent<HTMLInputElement>) => {
