@@ -246,6 +246,9 @@ export function QuestionEdit ({
                         }}
                     ></Form.Check>
                     <Button
+                        data-testid={
+                            "question_delete_button_" + index
+                        }
                         variant="danger"
                         onClick={() => {
                             removeQuestion(question.id);

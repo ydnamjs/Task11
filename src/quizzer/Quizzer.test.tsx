@@ -170,7 +170,32 @@ describe("Quizzer Tests", () => {
     });
 
     test("Users can delete an existing quiz question", () => {
-    //FIXME
+        //open simple questions
+        const text = screen.getByText("Simple_Questions");
+        text.click();
+
+        //expect there to be a question titled "What is 2+2?"
+        expect(
+            screen.queryByText("What is 2+2?", { exact: false })
+        ).toBeInTheDocument();
+
+        //open the edit menu
+        const editButton = screen.getByText("Edit");
+        editButton.click();
+        
+        //delete the question
+        const questionDeleteButton = screen.getByTestId("question_delete_button_0");
+        questionDeleteButton.click();
+        
+        //click the save button
+        const saveButton = screen.getByText("Save");
+        saveButton.click();
+
+        //expect there to not be a question titled "What is 2+2?"
+        expect(
+            screen.queryByText("What is 3+3?", { exact: false })
+        ).not.toBeInTheDocument();
+
     });
 
     test("Users can add a new quiz question", () => {
@@ -209,8 +234,6 @@ describe("Quizzer Tests", () => {
             screen.queryByText("What is 3+3?", { exact: false })
         ).not.toBeInTheDocument();
 
-        screen.debug();
-
         //open the edit menu
         const editButton = screen.getByText("Edit");
         editButton.click();
@@ -219,14 +242,12 @@ describe("Quizzer Tests", () => {
         const editTitleBox = screen.getByTestId("edit_question_title_0");
         //userEvent.type(editTitleBox, "What is 3+3?");
         fireEvent.change(editTitleBox, {
-            target: { value: "What is 2+2?" },
+            target: { value: "What is 3+3?" },
           });
 
         //click the save button
         const saveButton = screen.getByText("Save");
         saveButton.click();
-
-        screen.debug();
 
         //expect to see what is 3+3?
         expect(
