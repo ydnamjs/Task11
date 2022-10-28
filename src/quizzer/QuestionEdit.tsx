@@ -85,7 +85,7 @@ export function QuestionEdit ({
                         >
                             <Form.Control
                                 value={question.body}
-                                data-testid="edit_question_title"
+                                data-testid={"edit_question_title_" + index}
                                 onChange={(
                                     e: React.ChangeEvent<HTMLInputElement>
                                 ) => {

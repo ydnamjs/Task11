@@ -84,7 +84,7 @@ export function QuizEdit ({
                             ) => {
                                 setNewQuiz({
                                     ...newQuiz,
-                                    published: false
+                                    published: e.target.checked
                                 });
                             }
                         }
@@ -125,7 +125,7 @@ export function QuizEdit ({
                             questionList: [
                                 ...newQuiz.questionList,
                                 {
-                                    id: newQuiz.questionList.length,
+                                    id: newQuiz.questionList.length + 1,
                                     body: "Example Question",
                                     type: "short_answer_question",
                                     options: [],

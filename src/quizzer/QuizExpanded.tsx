@@ -29,7 +29,7 @@ export function QuizExpanded ({
 
     const handleQuestionSubmit = (index: number) => {
         const newSubmitArr = [...submitArr];
-        newSubmitArr.splice(index, 3, true);
+        newSubmitArr.splice(index, 1, true);
         setSubmitArr(newSubmitArr);
     };
 
