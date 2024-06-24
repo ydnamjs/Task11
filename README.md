@@ -1,18 +1,27 @@
-# React TypeScript Starter Repo
+# Task 11
+This project was an assignment from CISC 275: Introduction to Software Engineering from my Undergrad studies at the University Of Delaware
 
-Hello! This repository has been pre-configured with eslint and gh-pages to automatically deploy your app when you push to the main branch.
+We were given a broken front-end quizzer application to debug
 
-You will, however, need to finish setting up the deployment.
+## Live Site
+Check out the deployed site at: https://ydnamjs.github.io/Task11/
 
-### 1. Generate a personal access token
+## Technologies Used
+- React
+- Node.js
+- Node Package Manager
+- Typescript
+- Git and GitHub (For version control)
+- GitHub Pages (For live deployment)
+- GitHub Workflow (For automatic deployment on PR Merge)
+- Eslint
 
-1. Click on your picture -> `settings` in the top right of Github.
-2. Then, scroll to `Developer Settings` and click `Personal access tokens`
-3. Generate a new token with `repo` access and no expiration date.
-4. Make sure you copy the created token as you will not be able to see it after this.
+## Installation and Usage
+1. Clone the repository: `git clone https://github.com/ydnamjs/Task11.git` (BE WARNED there was no gitignore for the node modules so it will take a fair bit of time and space)
+2. Navigate into the repository: `cd Task11/`
+3. Install dependencies: `npm i`
+4. Run a local version of the site: `npm run start`
+5. Navigate to: `http://localhost:3000`
 
-### 2. Add a secret to the forked repo
-
-Back in this repository, go to `settings` -> `secrets` -> `Actions` and click the `New repository secret` button in the topright.
-
-Name the secret "GH_TOKEN" and paste in the token you copied in the previous step.
+## License
+This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE) file for details.
