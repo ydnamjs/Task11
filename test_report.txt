@@ -1,10 +1,14 @@
 
 > tasks@0.1.0 test
-> react-scripts test
+> react-scripts test --coverage
 
 Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+PASS src/App.test.tsx
 PASS src/quizzer/Quizzer.test.tsx
   ● Console
 
@@ -69,7 +73,6 @@ PASS src/quizzer/Quizzer.test.tsx
       at updateFragment (node_modules/react-dom/cjs/react-dom.development.js:17294:3)
       at beginWork (node_modules/react-dom/cjs/react-dom.development.js:19102:14)
 
-PASS src/App.test.tsx
 -------------------|---------|----------|---------|---------|----------------------------------------
 File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                      
 -------------------|---------|----------|---------|---------|----------------------------------------
@@ -94,5 +97,5 @@ All files          |   83.57 |    83.33 |   82.19 |   82.83 |
 Test Suites: 2 passed, 2 total
 Tests:       15 passed, 15 total
 Snapshots:   0 total
-Time:        4.292 s
+Time:        4.349 s
 Ran all test suites.
